@@ -1,10 +1,29 @@
 package permutation
 
-
-func getPermutations(arr []int,value int) [][]int{
-	len := len(arr);
-	for i:=len-1;i>=0;i--{
-		tmp:=make([]int, len);
-
+func GetAllPermutation(arr []int) [][]int {
+	len := len(arr)
+	if len == 1 {
+		return [][]int{arr}
 	}
+	lastValue := arr[len-1]
+	subArr := arr[:len-1]
+	subArrs := GetAllPermutation(subArr)
+	var result [][]int
+	for i := range subArrs {
+		subResult := getPermutations(subArrs[i], lastValue)
+		result = append(result, subResult...)
+	}
+	return result
+}
+func getPermutations(arr []int, value int) [][]int {
+	len := len(arr) + 1
+	var result [][]int
+	for i := len - 1; i >= 0; i-- {
+		var tmp []int
+		tmp = append(tmp, arr[:i]...)
+		tmp = append(tmp, value)
+		tmp = append(tmp, arr[i:]...)
+		result = append(result, tmp)
+	}
+	return result
 }
