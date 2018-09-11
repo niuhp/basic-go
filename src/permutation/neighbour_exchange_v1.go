@@ -1,13 +1,13 @@
 package permutation
 
-func GetAllPermutation(arr []int) [][]int {
+func GetAllPermutationV1(arr []int) [][]int {
 	len := len(arr)
 	if len == 1 {
 		return [][]int{arr}
 	}
 	lastValue := arr[len-1]
 	subArr := arr[:len-1]
-	subArrs := GetAllPermutation(subArr)
+	subArrs := GetAllPermutationV1(subArr)
 	var result [][]int
 	for i := range subArrs {
 		subResult := getPermutations(subArrs[i], lastValue)

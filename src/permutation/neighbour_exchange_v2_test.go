@@ -1,13 +1,13 @@
 package permutation
 
 import (
-	"fmt"
 	"testing"
+	"fmt"
 )
 
-func TestGetAllPermutationV1(t *testing.T) {
+func TestGetAllPermutationV2(t *testing.T) {
 	arr := []int{1, 2, 3, 4}
-	result := GetAllPermutationV1(arr)
+	result := GetAllPermutationV2(arr)
 	for i := range result {
 		fmt.Println(result[i])
 	}
