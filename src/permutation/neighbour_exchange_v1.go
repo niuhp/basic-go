@@ -9,8 +9,8 @@ func GetAllPermutationV1(arr []int) [][]int {
 	subArr := arr[:len-1]
 	subArrs := GetAllPermutationV1(subArr)
 	var result [][]int
-	for i := range subArrs {
-		subResult := getPermutations(subArrs[i], lastValue)
+	for _, item := range subArrs {
+		subResult := getPermutations(item, lastValue)
 		result = append(result, subResult...)
 	}
 	return result
