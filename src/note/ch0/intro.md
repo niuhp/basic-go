@@ -1,5 +1,5 @@
 ### 3 位创始人
-![](ch0.jpg)  
+![](./ch0.jpg)  
 1. Rob Pike（罗伯.派克）  
    曾是贝尔实验室（Bell Labs）的Unix团队，和Plan 9操作系统计划的成员。他与Thompson共事多年，并共创出广泛使用的UTF-8 字元编码。
 2. Ken Thompson（肯.汤普森）  
