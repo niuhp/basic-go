@@ -6,8 +6,8 @@ import (
 	"flag"
 )
 
-var para_a = flag.Bool("a", false, "boolean parameter")
-var para_b = flag.String("b", "para_b_str", "string parameter")
+var para_a = flag.Bool("a", false, "布尔值，如 0,false,1,true")
+var para_b = flag.String("b", "para_b_str", "字符串参数，可以使用双引号")
 
 func main() {
 	flag.Parse()
