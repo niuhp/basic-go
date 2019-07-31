@@ -1,4 +1,4 @@
-package statement
+package ch5
 
 import (
 	"testing"
