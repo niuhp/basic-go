@@ -29,3 +29,15 @@ func TestMapTravel(t *testing.T) {
 		t.Log("k =", k, ",v =", v)
 	}
 }
+
+func TestMapFunc(t *testing.T) {
+	m := map[string]func(a int, b int) int{}
+	m["sum"] = func(a int, b int) int {
+		return a + b
+	}
+	m["multi"] = func(a int, b int) int {
+		return a * b
+	}
+	t.Log(m["sum"](2, 4))
+	t.Log(m["multi"](2, 4))
+}
