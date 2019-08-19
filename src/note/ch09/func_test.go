@@ -1,4 +1,4 @@
-package ch9
+package ch09
 
 import (
 	"math/rand"

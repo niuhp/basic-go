@@ -1,4 +1,4 @@
-package ch8
+package ch08
 
 import (
 	"testing"
