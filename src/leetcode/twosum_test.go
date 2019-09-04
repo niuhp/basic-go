@@ -7,21 +7,16 @@ import (
 )
 
 func TwoSum(nums []int, target int) []int {
-	if nums == nil || len(nums) < 2 {
-		return nil
-	}
 	for i, a := range nums {
-		result := []int{a, 0}
-		for j, b := range nums {
-			if i != j && a+b == target {
-				result[1] = b
-				return result
+		tmp := target - a
+		for j := i + 1; j < len(nums); j++ {
+			if nums[j] == tmp {
+				return []int{i, j}
 			}
 		}
 	}
-	return nil
+	return []int{-1, -1}
 }
-
 func TestTowSum(t *testing.T) {
 	len := 30
 	nums := make([]int, 0, len)
