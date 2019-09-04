@@ -34,5 +34,9 @@ func TestGreet(t *testing.T) {
 	m.People.Greet()
 
 	fmt.Println("-------------------")
-	
+
+	var m2 *Man = new(Man)
+	m2.Greet()
+	//var p *People = new(Man) //不能赋值给父类
+
 }
